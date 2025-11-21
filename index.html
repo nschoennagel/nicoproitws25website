@@ -1,16 +1,20 @@
 <html>
     <head>
             <script>
-                document.querySelector('button').addEventListener('click', function() {
-                    const email = document.getElementById('email').value;
-                    const name = document.getElementById('name').value;
-                    const url = `https://2oe91jroze.execute-api.eu-west-1.amazonaws.com/default/nicofirstMS?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
-                    
-                    fetch(url)
-                        .then(response => response.json())
-                        .then(data => console.log(data))
-                        .catch(error => console.error('Error:', error));
-                });
+                document.addEventListener('DOMContentLoaded', function() {
+
+                    document.querySelector('button').addEventListener('click', function() {
+                        const email = document.getElementById('email').value;
+                        const name = document.getElementById('name').value;
+                        const url = `https://2oe91jroze.execute-api.eu-west-1.amazonaws.com/default/nicofirstMS?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+                        
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(data => console.log(data))
+                            .catch(error => console.error('Error:', error));
+                    });
+            });
+
             </script>
     </head>
 
