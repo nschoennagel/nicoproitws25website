@@ -1,12 +1,5 @@
 <html>
-    <body>
-        Hello HTW
-
-        # add two input field s and a button
-        <form>
-            <input type="text" id="email" name="email" >
-            <input type="text" id="name" name="name" >
-
+    <head>
             <script>
                 document.querySelector('button').addEventListener('click', function() {
                     const email = document.getElementById('email').value;
@@ -19,6 +12,15 @@
                         .catch(error => console.error('Error:', error));
                 });
             </script>
+    </head>
+
+    <body>
+        Hello HTW
+
+        # add two input field s and a button
+        <form>
+            <input type="text" id="email" name="email" >
+            <input type="text" id="name" name="name" >
 
             <button type="button">Submit</button>
         </form> 
